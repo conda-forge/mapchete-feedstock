@@ -14,15 +14,15 @@ build:
     - mapchete=mapchete.cli.main:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - hatchling
-    - python >=3.8
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - python-dateutil
     - affine
     - aiobotocore >=1.1.2
@@ -65,6 +65,7 @@ test:
     - mapchete --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/ungarj/mapchete
