@@ -41,7 +41,7 @@ requirements:
     - importlib-metadata
     - importlib-resources
     - lxml
-    - matplotlib <3.10
+    - matplotlib <3.10.0
     - memray
     - numpy >=1.16,!=2.0.1
     - oyaml
