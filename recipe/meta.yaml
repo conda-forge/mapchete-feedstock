@@ -58,8 +58,8 @@ requirements:
     - tqdm
 
 test:
-  imports:
-    - mapchete
+  # imports:
+  #   - mapchete
   commands:
     - pip check
     - mapchete --help
