@@ -41,6 +41,7 @@ requirements:
     - importlib-metadata
     - importlib-resources
     - lxml
+    - matplotlib <3.10
     - memray
     - numpy >=1.16,!=2.0.1
     - oyaml
@@ -58,8 +59,8 @@ requirements:
     - tqdm
 
 test:
-  # imports:
-  #   - mapchete
+  imports:
+    - mapchete
   commands:
     - pip check
     - mapchete --help
