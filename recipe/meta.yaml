@@ -1,5 +1,5 @@
 {% set name = "mapchete" %}
-{% set version = "2025.5.0" %}
+{% set version = "2025.5.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/mapchete-{{ version }}.tar.gz
-  sha256: 37b3225c5f72848483ed976ae06fb8bb1dd3ece4bb79fb7436db3a100e978007
+  sha256: 368acc98c149553e513c9c5138c029d13ed6a8f0515ec4582f45c0e6f9487d94
 
 build:
   entry_points:
-    - mapchete=mapchete.cli.main:main
+    - mapchete=mapchete.cli.mapchete:main
+    - mpath=mapchete.cli.mpath:mpath
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   number: 0
@@ -64,6 +65,7 @@ test:
   commands:
     - pip check
     - mapchete --help
+    - mpath --help
   requires:
     - pip
     - python {{ python_min }}
