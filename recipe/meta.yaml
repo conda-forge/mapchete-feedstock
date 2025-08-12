@@ -21,10 +21,10 @@ build:
 requirements:
   host:
     - hatchling
-    - python {{ python_min }}
+    - python
     - pip
   run:
-    - python >={{ python_min }}
+    - python
     - python-dateutil
     - affine
     - aiobotocore >=1.1.2
