@@ -14,7 +14,7 @@ build:
   entry_points:
     - mapchete=mapchete.cli.mapchete:main
     - mpath=mapchete.cli.mpath:mpath
-  skip: true  # [win]
+  skip: true  # [not linux64]
   script: {{ PYTHON }} -m pip install . -vv
   number: 1
   
