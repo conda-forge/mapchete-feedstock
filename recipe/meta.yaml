@@ -18,6 +18,9 @@ build:
   script: {{ PYTHON }} -m pip install . -vv
   number: 1
 
+build:
+  skip: true  # [win] 
+
 requirements:
   host:
     - hatchling
