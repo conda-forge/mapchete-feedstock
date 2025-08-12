@@ -14,12 +14,11 @@ build:
   entry_points:
     - mapchete=mapchete.cli.mapchete:main
     - mpath=mapchete.cli.mpath:mpath
-  noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   number: 1
 
 build:
-  skip: true  # [win] 
+  skip: true  # [win]
 
 requirements:
   host:
@@ -47,7 +46,7 @@ requirements:
     - importlib-resources
     - lxml
     - matplotlib-base <3.10.0
-    - memray # [not win]
+    - memray
     - numpy >=1.16,!=2.0.1
     - oyaml
     - pydantic >=2.3.0
