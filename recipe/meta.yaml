@@ -1,5 +1,6 @@
 {% set name = "mapchete" %}
 {% set version = "2025.6.0" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
@@ -13,17 +14,17 @@ build:
   entry_points:
     - mapchete=mapchete.cli.mapchete:main
     - mpath=mapchete.cli.mpath:mpath
+  noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  skip: true  # [not linux64 or (py<310 or py>313)]
   number: 2
   
 requirements:
   host:
     - hatchling
-    - python
+    - python >={{ python_min }}
     - pip
   run:
-    - python
+    - python >={{ python_min }}
     - python-dateutil
     - affine
     - aiobotocore >=1.1.2
