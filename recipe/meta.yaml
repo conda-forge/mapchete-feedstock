@@ -21,7 +21,7 @@ build:
 requirements:
   host:
     - hatchling
-    - python >={{ python_min }}
+    - python {{ python_min }}
     - pip
   run:
     - python >={{ python_min }}
@@ -44,7 +44,7 @@ requirements:
     - importlib-resources
     - lxml
     - matplotlib-base <3.10.0
-    - memray  # [not win]
+    - memray
     - numpy >=1.16,!=2.0.1
     - oyaml
     - pydantic >=2.3.0
