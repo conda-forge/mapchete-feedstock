@@ -16,7 +16,7 @@ build:
     - mpath=mapchete.cli.mpath:mpath
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 2
+  number: 3
   
 requirements:
   host:
