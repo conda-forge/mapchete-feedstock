@@ -3,7 +3,7 @@ About mapchete-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/mapchete-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/ungarj/mapchete
+Home: https://github.com/mapchete/mapchete
 
 Package license: MIT
 
