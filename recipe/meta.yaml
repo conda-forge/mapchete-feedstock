@@ -1,5 +1,5 @@
 {% set name = "mapchete" %}
-{% set version = "2025.10.1" %}
+{% set version = "2025.11.0" %}
 {% set python_min = "3.10" %}
 
 package:
