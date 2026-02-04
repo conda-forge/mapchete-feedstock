@@ -1,5 +1,5 @@
 {% set name = "mapchete" %}
-{% set version = "2025.12.0" %}
+{% set version = "2026.2.1" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/mapchete-{{ version }}.tar.gz
-  sha256: f1de70541220e5383cdd08bd69e457158fc11fc0ad468cf14788db27a0740459
+  sha256: 693bd3db2c04e18c54b66f4f1cb17be64afdd0d546bba022f95163d13b2e8c39
 
 build:
   entry_points:
@@ -17,7 +17,7 @@ build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   number: 0
-  
+
 requirements:
   host:
     - hatchling
