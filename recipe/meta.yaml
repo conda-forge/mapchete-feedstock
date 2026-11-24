@@ -1,5 +1,5 @@
 {% set name = "mapchete" %}
-{% set version = "2026.7.0" %}
+{% set version = "2026.11.0" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -7,8 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/mapchete-{{ version }}.tar.gz
-  sha256: 9b8e28d27c362fc60ed17746f62845f828defaee67fb976a15e979e2be0f4682
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/mapchete-{{ version }}.tar.gz
+  sha256: 1d5f6a3abc4c02f759c208fa7504b148066613f30b962465f77c1703e74a384a
 
 build:
   entry_points:
@@ -38,7 +38,7 @@ requirements:
     - distributed
     - fiona >=1.8.13.post1
     - flask >=1.1.2,<=3.0.0
-    - fsspec[http,s3] >=2023.12.0,!=2026.6.0
+    - fsspec >=2023.12.0,!=2026.6.0
     - geojson-pydantic
     - importlib-metadata
     - importlib-resources
@@ -50,15 +50,17 @@ requirements:
     - pydantic >=2.3.0
     - pydantic-settings >=2.0.0
     - pyproj
-    - pystac[urllib3] >=1.8.2
+    - pystac >=1.8.2
     - pystac-client >=0.7.2
-    - rasterio >=1.2.10
+    - rasterio >1.2.10
+    - requests
     - retry
     - rtree
     - s3fs >2023.9.0
     - shapely >=2.0.0
     - tilematrix >=2022.12.0
     - tqdm
+    - urllib3
 
 test:
   imports:
